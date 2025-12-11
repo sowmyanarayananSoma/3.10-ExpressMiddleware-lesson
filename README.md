@@ -76,6 +76,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 ```
 
+## **express.Router() — Modular Route Middleware**
+Express provides a built‑in function called **`express.Router()`**. This allows you to create **mini route modules** that help organize your app.
+
+### Why Do We Use Routers?
+- Keep `server.js` clean
+- Group related routes (e.g., `/users`, `/products`)
+- Apply middleware to specific route groups
+
+### In server.js
+```js
+import usersRoute from "./routes/user.js";
+app.use("/users", usersRoute);
+```
+
+This makes:
+- `GET /users` → runs router’s `/`
+- `POST /users` → runs router’s `/`
+
 ---
 
 # **5. Creating Custom Middleware**
