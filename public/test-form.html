@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Form Submission</title>
+</head>
+<body>
+  <h1>Test express.urlencoded()</h1>
+
+  <!-- Change the action URL if needed -->
+  <form action="http://localhost:3000/users/test-form" method="POST">
+    <label>
+      Username:
+      <input type="text" name="username" />
+    </label>
+    <br /><br />
+
+    <label>
+      Email:
+      <input type="email" name="email" />
+    </label>
+    <br /><br />
+
+    <button type="submit">Submit Form</button>
+  </form>
+</body>
+</html>
